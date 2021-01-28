@@ -5,6 +5,16 @@
     transition: 0.3s;
   }
 
+  .card_header_titile{
+    width: 600px;
+    height: 100px;
+    box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   } */
@@ -17,10 +27,9 @@
       float: left;
   }
 
-  .middle{
-      float: left;
-      width: 880px;
-      font-family: sans-serif;
+  .titleHeader{
+      width: auto;
+      font-family: monospace;
       font-size: larger;
   }
 
