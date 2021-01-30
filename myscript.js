@@ -18,6 +18,8 @@ var teacherEmail = [];
 var teacherphone = [];
 var teacherImage = [];
 
+var status = true;
+
 var initialSearchBox = document.getElementById("search");
 
 function searchFuntion(){
@@ -53,6 +55,8 @@ function searchFuntion(){
                     htmltSearchTag += '<div class="info"><img class="icon" src="icon_phone.png" alt=""/><span id="phoneTcr">'+teacherphone[a]+'</span></div></div></div>';
 
                     containerDiv.innerHTML = htmltSearchTag;
+
+                    status = false;
             // addItemToTheList(teacherInitial[a], teacherName[a], teacherDesignation[a], teacherDepartment[a], teacherEmail[a], teacherphone[a]);
         }
     }
@@ -127,17 +131,10 @@ function FeatchAllData(){
     });
 }
 
-window.onload(FeatchAllData());
-
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-} else {
-    header.classList.remove("sticky");
-}
-}
+if (window.addEventListener) {
+    window.addEventListener('load', FeatchAllData);
+ } else if (window.attachEvent) {
+    window.attachEvent('onload', FeatchAllData);
+ } else { 
+    window.onload = FeatchAllData;
+ }
