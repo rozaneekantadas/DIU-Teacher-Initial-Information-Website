@@ -137,7 +137,7 @@
         margin-right: auto;
     }
 
-    .topnav input[type=text] {
+    .topnav input[type=search] {
     padding: 6px;
     font-size: 17px;
     border: none;
@@ -162,7 +162,7 @@
         float: none;
     }
 
-    .topnav a, .topnav input[type=text], .topnav .search-container button {
+    .topnav a, .topnav input[type=search], .topnav .search-container button {
         float: none;
         display: block;
         text-align: left;
@@ -170,7 +170,7 @@
         margin: 0;
         padding: 14px;
     }
-    .topnav input[type=text] {
+    .topnav input[type=search] {
         border: 1px solid #ccc;  
     }
     }

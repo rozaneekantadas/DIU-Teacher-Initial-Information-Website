@@ -18,21 +18,35 @@ var teacherEmail = [];
 var teacherphone = [];
 var teacherImage = [];
 
-var status = true;
+var containerDiv2 = document.getElementById("containerDiv2");
 
-var initialSearchBox = document.getElementById("search");
+var containerDiv = document.getElementById("containerDiv");
+var imageDiv = document.getElementsByClassName("imageTcr");
+var initialDiv = document.getElementById("initialTcr");
+var nameDiv = document.getElementById("nameTcr");
+var designationDiv = document.getElementById("designationTcr");
+var departmentDiv = document.getElementById("departmentTcr");
+var emailDiv = document.getElementById("emailTcr");
+var phoneDiv = document.getElementById("phoneTcr");
+var htmtElements = "";
 
 function searchFuntion(){
 
-    var initialText = initialSearchBox.value;
+    var initialSearchBox = document.getElementById("search");
+
+    initialText = initialSearchBox.value;
 
     if(initialText == ''){
         alert("Enter Teacher Initial");
+        containerDiv.innerHTML = htmtElements;
+        return false;
     }
     else{
         var a = teacherInitial.indexOf(initialText);
         if(a<0){
             alert("Teacher Not Found");
+            containerDiv.innerHTML = htmtElements;
+            return false;
         }
         else{
             var htmltSearchTag = "";
@@ -55,22 +69,9 @@ function searchFuntion(){
                     htmltSearchTag += '<div class="info"><img class="icon" src="icon_phone.png" alt=""/><span id="phoneTcr">'+teacherphone[a]+'</span></div></div></div>';
 
                     containerDiv.innerHTML = htmltSearchTag;
-
-                    status = false;
-            // addItemToTheList(teacherInitial[a], teacherName[a], teacherDesignation[a], teacherDepartment[a], teacherEmail[a], teacherphone[a]);
         }
     }
 }
-
-var containerDiv = document.getElementById("containerDiv");
-var imageDiv = document.getElementsByClassName("imageTcr");
-var initialDiv = document.getElementById("initialTcr");
-var nameDiv = document.getElementById("nameTcr");
-var designationDiv = document.getElementById("designationTcr");
-var departmentDiv = document.getElementById("departmentTcr");
-var emailDiv = document.getElementById("emailTcr");
-var phoneDiv = document.getElementById("phoneTcr");
-var htmtElements = "";
 
 function addItemToTheList(tinitial, tname, tdes, tdep, temail, tphone, timage){
 
@@ -93,15 +94,6 @@ function addItemToTheList(tinitial, tname, tdes, tdep, temail, tphone, timage){
     htmtElements += '<div class="info"><img class="icon" src="icon_phone.png" alt=""/><span id="phoneTcr">'+tphone+'</span></div></div></div>';
 
     containerDiv.innerHTML = htmtElements;
-
-    // imageDiv[0].src = timage;
-    // initialDiv.innerHTML = tinitial;
-    // nameDiv.innerHTML = tname;
-    // designationDiv.innerHTML = tdes;
-    // departmentDiv.innerHTML = tdep;
-    // emailDiv.innerHTML = temail;
-    // phoneDiv.innerHTML = tphone;
-    
 }
 
 

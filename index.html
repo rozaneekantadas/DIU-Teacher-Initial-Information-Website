@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="style.css"></link>
     <link rel="icon" href="diuIcon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 
 <body>
@@ -38,10 +39,8 @@
 
     <div class="topnav">
         <div class="search-container">
-          <form>
-            <input type="text" placeholder="Enter Teacher Initial..." id="search" name="search">
-            <button type="submit" onclick="searchFuntion()"><i class="fa fa-search"></i></button>
-          </form>
+            <input type="search" placeholder="Enter Teacher Initial..." id="search" onsearch="searchFuntion()">
+            <button onclick="searchFuntion()"><i class="fa fa-search"></i></button>
         </div>
       </div>
 
