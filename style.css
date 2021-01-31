@@ -174,4 +174,27 @@
         border: 1px solid #ccc;  
     }
     }
-  
+
+    progress{
+      -webkit-appearance: none;
+      width: 50%;
+      height: 25px;
+      color: #aaa;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    ::-webkit-progress-bar{
+      background: f1f1f1;
+    }
+
+    ::-webkit-progress-value{
+      background: #aaa;
+      float: left;
+    }
+
+    ::-moz-progress-bar{
+      background: #aaa;
+    }

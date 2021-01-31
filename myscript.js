@@ -10,6 +10,17 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+setInterval(function() {
+
+    document.getElementsByTagName('progress')[0].value = 
+    document.getElementsByTagName('progress')[0].value +1;
+
+    if(document.getElementsByTagName('progress')[0].value == 10){
+        document.getElementsByTagName('progress')[0].value = 1;
+    }
+
+}, 250);
+
 var teacherInitial = [];
 var teacherName = [];
 var teacherDesignation = [];
@@ -94,6 +105,8 @@ function addItemToTheList(tinitial, tname, tdes, tdep, temail, tphone, timage){
     htmtElements += '<div class="info"><img class="icon" src="icon_phone.png" alt=""/><span id="phoneTcr">'+tphone+'</span></div></div></div>';
 
     containerDiv.innerHTML = htmtElements;
+
+    document.getElementsByTagName('progress')[0].style.visibility = "hidden";
 }
 
 
@@ -123,10 +136,4 @@ function FeatchAllData(){
     });
 }
 
-if (window.addEventListener) {
-    window.addEventListener('load', FeatchAllData);
- } else if (window.attachEvent) {
-    window.attachEvent('onload', FeatchAllData);
- } else { 
-    window.onload = FeatchAllData;
- }
+window.onload = FeatchAllData;
