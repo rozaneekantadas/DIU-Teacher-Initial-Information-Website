@@ -53,6 +53,7 @@ function searchFuntion(){
         return false;
     }
     else{
+        initialText = initialText.toUpperCase();
         var a = teacherInitial.indexOf(initialText);
         if(a<0){
             alert("Teacher Not Found");
